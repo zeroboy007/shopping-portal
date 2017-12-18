@@ -6,6 +6,57 @@ Front-end app
 ---
 Front-end application written in [Node.js](https://nodejs.org/en/) that puts together all of the microservices under [microservices-demo](https://github.com/microservices-demo/microservices-demo).
 
+
+# Dev
+
+Platform : Ubuntu 16.04
+
+```
+sudo apt-get update  
+sudo apt-get install git wget curl build-essential -yq
+
+# Install Nodejs with NPM
+cd /tmp
+wget -c https://nodejs.org/dist/latest-v4.x/node-v4.8.6-linux-x64.tar.gz
+
+sudo tar -xzf node-v4.8.6-linux-x64.tar.gz -C /usr/local --strip-components=1
+
+ln -s /usr/local/bin/node /usr/local/bin/nodejs
+
+
+# validation  
+node --version  
+nodejs --version  
+npm --version  
+
+# Install Yarn, a package manager for Node
+
+curl -o- -L https://yarnpkg.com/install.sh | bash
+export PATH="$HOME/.yarn/bin:$PATH"
+
+# validation
+yarn --version
+
+# Clone the source and install using yarn
+cd /opt
+git clone https://github.com/microservices-demo/front-end.git
+cd front-end/
+yarn install
+```
+
+
+## Launching the App
+
+The front-end service can be launched with npm using the following command.
+
+export NODE_ENV=production
+`npm start`
+
+
+Service will launch on port **8079**
+
+
+
 # Build
 
 ## Dependencies
@@ -56,7 +107,7 @@ make test
 ```
 
 ## End-to-End tests:
-  
+
 To make sure that the test suite is running against the latest (local) version with your changes, you need to manually build
 the image, run the container and attach it to the proper Docker networks.
 There is a make task that will do all this for you:
