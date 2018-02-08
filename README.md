@@ -19,9 +19,8 @@ sudo apt-get install git wget curl build-essential -yq
 
 # Install Nodejs with NPM
 cd /tmp
-wget -c https://nodejs.org/dist/latest-v4.x/node-v4.8.6-linux-x64.tar.gz
-
-sudo tar -xzf node-v4.8.6-linux-x64.tar.gz -C /usr/local --strip-components=1
+wget -c https://nodejs.org/dist/v4.8.6/node-v4.8.6-linux-x64.tar.xz
+sudo tar -xzf node-v4.8.6-linux-x64.tar.xz -C /usr/local --strip-components=1
 
 ln -s /usr/local/bin/node /usr/local/bin/nodejs
 
