@@ -11,6 +11,8 @@ Front-end application written in [Node.js](https://nodejs.org/en/) that puts tog
 
 Platform : Ubuntu 16.04
 
+
+### Common Setup
 ```
 
 # Install Pre reqs
@@ -30,15 +32,12 @@ node --version
 nodejs --version  
 npm --version  
 
-# Install Yarn, a package manager for Node
+```
 
-curl -o- -L https://yarnpkg.com/install.sh | bash
-export PATH="$HOME/.yarn/bin:$PATH"
 
-# validation
-yarn --version
+### Clone the source and install dependencies
 
-# Clone the source and install using yarn
+```
 cd /opt
 git clone https://github.com/microservices-demo/front-end.git
 cd front-end/
@@ -46,16 +45,61 @@ yarn install
 ```
 
 
-## Launching the App
+##### Launching the App
 
 The front-end service can be launched with npm using the following command.
 
+```
 export NODE_ENV=production
-`npm start`
+npm start
+```
 
 
 Service will launch on port **8079**
 
+
+## Production Deployment
+
+Follow **common steps** from above section.  
+
+  * Create release directories
+```
+mkdir -p /opt/apps/frontend/releases
+
+```
+
+  * Download the [latest artifact from this page](https://github.com/udbc/front-end/releases) to the releases directory created above
+e.g.
+```
+cd /opt/apps/frontend/releases
+wget -c https://github.com/udbc/front-end/archive/1.0.1.tar.gz
+```
+  * Extract the artifact
+
+```
+cd /opt/apps/frontend/releases
+tar -xzf 1.0.1.tar.gz
+
+ls
+
+front-end-1.0.1
+
+```
+
+  * Create a symlink */opt/frontend* pointing to the latest release
+
+e.g.
+```
+ln -s /opt/apps/frontend/releases/front-end-1.0.1 /opt/frontend
+```
+
+  * Install Dependencies and start the app
+
+```
+cd /opt/frontend
+npm install
+npm start
+```
 
 
 # Build
