@@ -1,5 +1,5 @@
 #!/bin/bash
-DIR=/opt/front-end
+DIR=/opt/frontend
 cd $DIR
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/node-v4.8.6-linux-x64/bin
 NODE_PATH=/usr/local/node-v4.8.6-linux-x64/lib/node_modules
