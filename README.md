@@ -101,6 +101,38 @@ npm install
 npm start
 ```
 
+#### Init Script
+
+You could also use the init script available at path  **scripts/frontend** .  You could copy this script to /etc/init.d so that you could start and stop service as,
+
+```
+service frontend start
+service frontend stop
+
+```
+
+
+#### App Configurations
+
+Frontend connects with all the backend services using endpoint configurations. These configs are in a file api/endpoints.js
+
+Sample of which is given below. 
+
+```
+module.exports = {
+  catalogueUrl:  util.format("http://catalogue%s", domain),
+  tagsUrl:       util.format("http://catalogue%s/tags", domain),
+  cartsUrl:      util.format("http://carts%s/carts", domain),
+  ordersUrl:     util.format("http://orders%s", domain),
+  customersUrl:  util.format("http://user%s/customers", domain),
+  addressUrl:    util.format("http://user%s/addresses", domain),
+  cardsUrl:      util.format("http://user%s/cards", domain),
+  loginUrl:      util.format("http://user%s/login", domain),
+  registerUrl:   util.format("http://user%s/register", domain),
+};
+
+```
+===========================
 
 # Build
 
