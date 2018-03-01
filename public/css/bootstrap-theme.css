@@ -146,11 +146,11 @@ fieldset[disabled] .btn-primary.active {
   background-image: none;
 }
 .btn-success {
-  background-image: -webkit-linear-gradient(top, #E49A49 0%, #419641 100%);
-  background-image:      -o-linear-gradient(top, #E49A49 0%, #419641 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#E49A49), to(#419641));
-  background-image:         linear-gradient(to bottom, #E49A49 0%, #419641 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffE49A49', endColorstr='#ff419641', GradientType=0);
+  background-image: -webkit-linear-gradient(top, #4993E4 0%, #419641 100%);
+  background-image:      -o-linear-gradient(top, #4993E4 0%, #419641 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#4993E4), to(#419641));
+  background-image:         linear-gradient(to bottom, #4993E4 0%, #419641 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff4993E4', endColorstr='#ff419641', GradientType=0);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   background-repeat: repeat-x;
   border-color: #3e8f3e;
@@ -463,11 +463,11 @@ fieldset[disabled] .btn-danger.active {
   background-repeat: repeat-x;
 }
 .progress-bar-success {
-  background-image: -webkit-linear-gradient(top, #E49A49 0%, #449d44 100%);
-  background-image:      -o-linear-gradient(top, #E49A49 0%, #449d44 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#E49A49), to(#449d44));
-  background-image:         linear-gradient(to bottom, #E49A49 0%, #449d44 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffE49A49', endColorstr='#ff449d44', GradientType=0);
+  background-image: -webkit-linear-gradient(top, #4993E4 0%, #449d44 100%);
+  background-image:      -o-linear-gradient(top, #4993E4 0%, #449d44 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#4993E4), to(#449d44));
+  background-image:         linear-gradient(to bottom, #4993E4 0%, #449d44 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff4993E4', endColorstr='#ff449d44', GradientType=0);
   background-repeat: repeat-x;
 }
 .progress-bar-info {
