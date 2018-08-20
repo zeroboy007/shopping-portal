@@ -34,7 +34,7 @@
   "contributors": [
     "Ian Crosby <ian.daniel.crosby@gmail.com>",
     "Carlos León <mail@carlosleon.info> (carlosleon.info)", 
-    "Gourav SHah <gouravshah@initcron.org>",
+    "Gourav SHah <gouravshah@initcron.org>"
   ],
   "license": "MIT",
   "dependencies": {
