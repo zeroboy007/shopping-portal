@@ -1,6 +1,8 @@
-For the recent versions of Alpine (v3.8+) the correct way to install nodejs with npm is:
-
+# For the recent versions of Alpine (v3.8+) the correct way to install nodejs with npm is:
 apk add --update nodejs npm
+
+# To Install the package Zip
+apk add zip
 
 
 
