@@ -92,6 +92,17 @@
                                 sizing</a>
                             </p>
                             <p id="price" class="price"></p>
+                            <c:choose>
+                                <c:when "${title=="Moto G3"}">
+                                    ${"Review - Excellent"}
+                                </c:when>
+                                <c:when "${title=="Google Pixel"}">
+                                    ${"Review - good"}
+                                </c:when>
+                                <c:otherwise>
+                                    ${"Review - ok"}
+                                </c:otherwise>
+                            </c:choose>
                             <p id="review" class="review"></p>
 
                             <p class="text-center buttons">
