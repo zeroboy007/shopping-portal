@@ -130,6 +130,7 @@
                         <li>Feature 2</li>
                     </ul>
                     <div>
+                    <!-- Customer Review -->
                     <a id="review" class="review" href="http://www.google.com">Customer Reviews</a>
                     </div>
                     <blockquote>
@@ -210,11 +211,39 @@ _________________________________________________________ -->
             $("#breadcrumb").text(data.name);
             $("#price").text("$" + data.price.toFixed(2));
             
-            if (data.name.localeCompare("Redmi Note4") == 0)
+            if (data.name.localeCompare("Moto G3") == 0)
             {
                 $("#review").attr("href", "https://s3-ap-southeast-1.amazonaws.com/tcssot.com/img/client1.jpg");
             }
+            if (data.name.localeCompare("Galaxy S6") == 0)
+            {
+                $("#review").attr("href", "https://s3-ap-southeast-1.amazonaws.com/tcssot.com/img/about-old.jpg");
+            }
             if (data.name.localeCompare("Google Pixel") == 0)
+            {
+                $("#review").attr("href", "https://s3-ap-southeast-1.amazonaws.com/tcssot.com/img/about-old.jpg");
+            }
+            if (data.name.localeCompare("Moto G5s Plus") == 0)
+            {
+                $("#review").attr("href", "https://s3-ap-southeast-1.amazonaws.com/tcssot.com/img/about-old.jpg");
+            }
+            if (data.name.localeCompare("Xiomi A1") == 0)
+            {
+                $("#review").attr("href", "https://s3-ap-southeast-1.amazonaws.com/tcssot.com/img/about-old.jpg");
+            }
+            if (data.name.localeCompare("Redmi Note4") == 0)
+            {
+                $("#review").attr("href", "https://s3-ap-southeast-1.amazonaws.com/tcssot.com/img/about-old.jpg");
+            }
+            if (data.name.localeCompare("iphone X") == 0)
+            {
+                $("#review").attr("href", "https://s3-ap-southeast-1.amazonaws.com/tcssot.com/img/about-old.jpg");
+            }
+            if (data.name.localeCompare("Moto G5") == 0)
+            {
+                $("#review").attr("href", "https://s3-ap-southeast-1.amazonaws.com/tcssot.com/img/about-old.jpg");
+            }
+            if (data.name.localeCompare("Galaxy S8") == 0)
             {
                 $("#review").attr("href", "https://s3-ap-southeast-1.amazonaws.com/tcssot.com/img/about-old.jpg");
             }
