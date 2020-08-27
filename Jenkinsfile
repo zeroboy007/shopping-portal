@@ -1,5 +1,8 @@
 pipeline {
   agent any
+   tools {
+    nodejs 'nodejs'
+  }
   stages {
     stage('build') {
       steps {
@@ -19,14 +22,11 @@ pipeline {
       steps {
         echo 'this is the package job'
         sh 'npm run package'
-        archiveArtifacts '**/distribution/*.zip'
       }
     }
 
   }
-  tools {
-    nodejs 'NodeJS 14.7.0'
-  }
+ 
   post {
     always {
       echo 'this pipeline has completed...'
