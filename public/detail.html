@@ -129,8 +129,9 @@
                         <li>Feature 1</li>
                         <li>Feature 2</li>
                     </ul>
-                    <p id="review" class="review"><a href="http://www.google.com">Customer Reviews</a></p>
-                    
+                    <div>
+                    <a id="review" class="review" href="http://www.google.com">Customer Reviews</a>
+                    </div>
                     <blockquote>
                         <p><em>This mobile comes with the manufacturer's warrenty !</em>
                         </p>
@@ -208,7 +209,7 @@ _________________________________________________________ -->
             $("#title").text(data.name);
             $("#breadcrumb").text(data.name);
             $("#price").text("$" + data.price.toFixed(2));
-            $("#review").text("Customer Reviews");
+            
             if (data.name.localeCompare("Redmi Note4") == 0)
             {
                 $("#review").attr("href", "https://s3-ap-southeast-1.amazonaws.com/tcssot.com/img/client1.jpg");
