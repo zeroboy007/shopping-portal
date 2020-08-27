@@ -569,6 +569,13 @@ h1 {
   text-align: center;
   font-weight: 300;
 }
+
+#content .product .text p.review {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 300;
+}
+
 #content .product .text p.price del {
   color: #999999;
 }
