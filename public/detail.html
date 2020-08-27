@@ -92,8 +92,7 @@
                                 sizing</a>
                             </p>
                             <p id="price" class="price"></p>
-                            <p id="review" class="review"></p>
-
+                         
                             <p class="text-center buttons">
                                 <a id="buttonCart" class="btn btn-primary"><i
                                         class="fa fa-shopping-cart"></i> Add to
@@ -130,12 +129,14 @@
                         <li>Feature 1</li>
                         <li>Feature 2</li>
                     </ul>
-
+                    <p id="review" class="review"></p>
+                    <h4 id="review" class="review"></h4>
                     <blockquote>
                         <p><em>This mobile comes with the manufacturer's warrenty !</em>
                         </p>
                     </blockquote>
 
+                    <p id="review" class="review"></p>
                     <hr>
                     <div class="social">
                         <h4>Show it to your friends</h4>
@@ -209,21 +210,14 @@ _________________________________________________________ -->
             $("#title").text(data.name);
             $("#breadcrumb").text(data.name);
             $("#price").text("$" + data.price.toFixed(2));
+            $("#review").text("Review Excellent");
             if (data.name.localeCompare("Redmi Note4") == 0)
             {
-                $("#review").text("Review Excellent");
+                $("#review").attr("href", "https://s3-ap-southeast-1.amazonaws.com/tcssot.com/img/client1.jpg");
             }
             if (data.name.localeCompare("Google Pixel") == 0)
             {
-                $("#review").text("Review Good");
-            }
-            if (data.name.localeCompare("Moto G3") == 0)
-            {
-                $("#review").text("Review Ok");
-            }
-            if (data.name.localeCompare("Galaxy S6") == 0)
-            {
-                $("#review").text("Review Poor");
+                $("#review").attr("href", "https://s3-ap-southeast-1.amazonaws.com/tcssot.com/img/about-old.jpg");
             }
             $("#imageMain").attr("src", data.imageUrl[0]);
             $("#buttonCart").attr("onClick", "addToCart(\'" + data.id + "\')");
