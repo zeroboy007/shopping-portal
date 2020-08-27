@@ -92,17 +92,6 @@
                                 sizing</a>
                             </p>
                             <p id="price" class="price"></p>
-                            <c:choose>
-                                <c:when "${title=="Moto G3"}">
-                                    ${"Review - Excellent"}
-                                </c:when>
-                                <c:when "${title=="Google Pixel"}">
-                                    ${"Review - good"}
-                                </c:when>
-                                <c:otherwise>
-                                    ${"Review - ok"}
-                                </c:otherwise>
-                            </c:choose>
                             <p id="review" class="review"></p>
 
                             <p class="text-center buttons">
@@ -220,7 +209,22 @@ _________________________________________________________ -->
             $("#title").text(data.name);
             $("#breadcrumb").text(data.name);
             $("#price").text("$" + data.price.toFixed(2));
-            $("#review").text("Seema Deraviyam");
+            if (data.name.localeCompare("Redmi Note4") == 0)
+            {
+                $("#review").text("Review Excellent");
+            }
+            if (data.name.localeCompare("Google Pixel") == 0)
+            {
+                $("#review").text("Review Good");
+            }
+            if (data.name.localeCompare("Moto G3") == 0)
+            {
+                $("#review").text("Review Ok");
+            }
+            if (data.name.localeCompare("Galaxy S6") == 0)
+            {
+                $("#review").text("Review Poor");
+            }
             $("#imageMain").attr("src", data.imageUrl[0]);
             $("#buttonCart").attr("onClick", "addToCart(\'" + data.id + "\')");
             var thumbHtml = "";
