@@ -92,6 +92,7 @@
                                 sizing</a>
                             </p>
                             <p id="price" class="price"></p>
+                            <p id="review" class="review"></p>
 
                             <p class="text-center buttons">
                                 <a id="buttonCart" class="btn btn-primary"><i
@@ -208,6 +209,7 @@ _________________________________________________________ -->
             $("#title").text(data.name);
             $("#breadcrumb").text(data.name);
             $("#price").text("$" + data.price.toFixed(2));
+            $("#review").text("Seema Deraviyam");
             $("#imageMain").attr("src", data.imageUrl[0]);
             $("#buttonCart").attr("onClick", "addToCart(\'" + data.id + "\')");
             var thumbHtml = "";
