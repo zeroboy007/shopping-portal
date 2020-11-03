@@ -17,7 +17,6 @@ pipeline {
     stage('test') {
       agent {
         docker {
-          args 'lagairogo/node:4-alpine'
           image 'lagairogo/node:4-alpine'
         }
 
