@@ -44,12 +44,7 @@ npm run package'''
     }
 
     stage('docker build and publish') {
-      agent {
-        docker {
-          image 'lagairogo/node:4-alpine'
-        }
-
-      }
+      agent any
       steps {
         script {
           docker.withRegistry('https://index.docker.io/v1/', 'dockerlogin') {
