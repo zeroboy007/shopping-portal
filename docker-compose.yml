@@ -1,0 +1,7 @@
+version: "3.6"
+services:
+  shopping-portal:
+    build: .
+    image: lagairogo/shopping-portal:v1
+    ports:
+      - 8079
