@@ -1,5 +1,5 @@
 pipeline {
-  agent none
+  agent any
   stages {
     stage('build') {
       agent {
@@ -15,7 +15,6 @@ pipeline {
     }
 
     stage('test') {
-      agent any
       steps {
         echo 'this is the test job'
         sh 'npm test'
@@ -37,6 +36,12 @@ pipeline {
     }
 
     stage('docker build and publish') {
+      agent {
+        docker {
+          image 'lagairogo/node:4-alpine'
+        }
+
+      }
       steps {
         script {
           docker.withRegistry('https://index.docker.io/v1/', 'dockerlogin') {
