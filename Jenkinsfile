@@ -1,7 +1,13 @@
 pipeline {
-  agent any
+  agent none
   stages {
     stage('build') {
+      agent {
+        docker {
+          image 'lagairogo/node:4-alpine'
+        }
+
+      }
       steps {
         echo 'this is the build job'
         sh 'npm install'
@@ -9,21 +15,42 @@ pipeline {
     }
 
     stage('test') {
+      agent {
+        docker {
+          args 'lagairogo/node:4-alpine'
+          image 'lagairogo/node:4-alpine'
+        }
+
+      }
       steps {
         echo 'this is the test job'
-        sh 'npm test'
+        sh '''npm install
+npm test'''
       }
     }
 
     stage('package') {
+      agent {
+        docker {
+          image 'lagairogo/node:4-alpine'
+        }
+
+      }
       steps {
         echo 'this is the package job'
-        sh 'npm run package'
+        sh '''npm install
+npm run package'''
         archiveArtifacts '**/distribution/*.zip'
       }
     }
 
     stage('docker build and publish') {
+      agent {
+        docker {
+          image 'lagairogo/node:4-alpine'
+        }
+
+      }
       steps {
         script {
           docker.withRegistry('https://index.docker.io/v1/', 'dockerlogin') {
