@@ -2,12 +2,6 @@ pipeline {
   agent any
   stages {
     stage('build') {
-      agent {
-        docker {
-          image 'lagairogo/node:4-alpine'
-        }
-
-      }
       steps {
         echo 'this is the build job'
         sh 'npm install'
@@ -22,12 +16,6 @@ pipeline {
     }
 
     stage('package') {
-      agent {
-        docker {
-          image 'lagairogo/node:4-alpine'
-        }
-
-      }
       steps {
         echo 'this is the package job'
         sh 'npm run package'
@@ -36,12 +24,6 @@ pipeline {
     }
 
     stage('docker build and publish') {
-      agent {
-        docker {
-          image 'lagairogo/node:4-alpine'
-        }
-
-      }
       steps {
         script {
           docker.withRegistry('https://index.docker.io/v1/', 'dockerlogin') {
