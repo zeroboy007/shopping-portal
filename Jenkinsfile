@@ -52,7 +52,7 @@ npm run package'''
       }
       steps {
         script {
-          withDockerRegistry([credentialsId: 'dockerlogin', url: "https://index.docker.io/v1/>/"]) {
+          docker.withRegistry('https://index.docker.io/v1/', 'dockerlogin') {
             def dockerImage = docker.build("lagairogo/shopping-portal:v${env.BUILD_ID}", "./")
             dockerImage.push()
             dockerImage.push("latest")
