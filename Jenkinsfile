@@ -15,12 +15,7 @@ pipeline {
     }
 
     stage('test') {
-      agent {
-        docker {
-          image 'lagairogo/node:4-alpine'
-        }
-
-      }
+      agent any
       steps {
         echo 'this is the test job'
         sh 'npm test'
