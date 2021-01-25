@@ -4,7 +4,7 @@ pipeline{
 
 // uncomment the following lines by removing /* and */ to enable
     tools{
-       nodejs 'NodeJS 15.6.0' 
+       nodejs 'nodejs' 
     }
     
 
