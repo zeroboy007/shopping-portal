@@ -1,7 +1,7 @@
 {
   "name": "mogambo-front-end",
-  "version": "0.0.2",
-  "description": "Front end for mogambo  application.",
+  "version": "0.0.1",
+  "description": "Front end for Lagairogo  application.",
   "main": "server.js",
   "config": {
     "service": "FRONTEND",
@@ -33,8 +33,8 @@
   },
   "contributors": [
     "Ian Crosby <ian.daniel.crosby@gmail.com>",
-    "Carlos León <mail@carlosleon.info> (carlosleon.info)", 
-    "Gourav SHah <gouravshah@initcron.org>"
+    "Carlos León <mail@carlosleon.info> (carlosleon.info)"
+    
   ],
   "license": "MIT",
   "dependencies": {
