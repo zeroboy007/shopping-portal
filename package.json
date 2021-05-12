@@ -1,5 +1,5 @@
 {
-  "name": "mogambo-front-end",
+  "name": "lagairogo-front-end",
   "version": "0.0.2",
   "description": "Front end for Lagairogo  application.",
   "main": "server.js",
@@ -29,11 +29,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/udbc/front-end"
+    "url": "https://github.com/lagairogo/shopping-portal"
   },
   "contributors": [
-    "Ian Crosby <ian.daniel.crosby@gmail.com>",
-    "Carlos León <mail@carlosleon.info> (carlosleon.info)"
+    "Lagairogo <maillagai@gmail.com>",
+    "Mark <maillagai@gmail.com> (lagairogo.info)"
     
   ],
   "license": "MIT",
